@@ -173,7 +173,6 @@ blueprint:
       description: Adaptive lighting switch to pull parameters from
       selector:
         entity:
-          include_entities: {switch.adaptive_lighting_adaptivelight}
           domain: switch
 # Automation schema
 variables:
