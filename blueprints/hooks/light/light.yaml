@@ -346,6 +346,8 @@ variables:
   on_brightness: !input on_brightness
   smooth_power_on: !input smooth_power_on
   smooth_power_off: !input smooth_power_off
+  enable_adaptive_lighting: !input enable_adaptive_lighting
+  adaptive_lighting_switch: !input adaptive_lighting_switch
   color_modes:
     Auto: auto
     Color Temperature: color_temp
