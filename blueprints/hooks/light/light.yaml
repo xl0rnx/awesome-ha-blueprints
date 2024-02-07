@@ -173,8 +173,7 @@ blueprint:
       description: Adaptive lighting switch to pull parameters from
       selector:
         entity:
-          filter:
-          - domain: switch
+          domain: switch
 # Automation schema
 variables:
   # convert blueprint inputs into variables to be used in templates
