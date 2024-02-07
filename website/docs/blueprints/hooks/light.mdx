@@ -109,7 +109,16 @@ This integration provides the entity which represents a light in Home Assistant.
   description='Allow a brightness down command (single or continuous) to turn off the light when at minimum brightness. Disabling this will prevent the light from being turned off by brightness down commands.'
   selector='boolean'
 />
-
+<Input
+  name='Use Adaptive Lighting'
+  description='Integrate with [Adaptive Lighting](https://github.com/basnijholt/adaptive-lighting) custom integration to provide flicker-free powering on experience. Light will be powered with proper parameters, providing instantaneous settings for brightness and color temperature.
+  selector='boolean'
+/>
+<Input
+  name='Entity of Adaptive Lighting switch'
+  description='Specify entity created by Adaptive Lighting integration. For example: `switch.adaptive_lighting_bedroom`'
+  selector='select'
+/>
 ## Supported Controllers
 
 - [IKEA E1524/E1810 TRÅDFRI Wireless 5-Button Remote](/docs/blueprints/controllers/ikea_e1524_e1810)
@@ -170,3 +179,4 @@ If you want to link multiple lights to the same controller you can either use [L
 - **2021-12-05**: Added secondary mapping for IKEA E2001/E2002
 - **2022-07-22**: Add support for Xiaomi WXKG11LM.
 - **2022-07-30**: Add support for SONOFF SNZB-01.
+- **2024-02-07**: Add support for the Adaptive Lighting Integration.
