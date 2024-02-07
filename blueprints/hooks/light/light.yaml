@@ -172,7 +172,7 @@ blueprint:
       name: Entity of Adaptive Lighting switch
       description: Adaptive lighting switch to pull parameters from
       selector:
-        entity:
+        device:
           integration: Adaptive Lighting
           domain: switch
 # Automation schema
