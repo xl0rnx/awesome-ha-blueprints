@@ -383,13 +383,18 @@ action:
                   - service: light.toggle
                     entity_id: !input light
                     data:
-                      brightness: !input on_brightness
+                      color_temp: >-
+                        {{ state_attr(adaptive_lighting_switch, 'color_temp_mired') |int if enable_adaptive_lighting }}
                       transition: '{{ light_transition / 1000 }}'
             default:
               - service: light.toggle
                 entity_id: !input light
                 data:
                   transition: '{{ light_transition / 1000 }}'
+                  brightness_pct: >-
+                    {{ state_attr(adaptive_lighting_switch, 'brightness_pct') |int if enable_adaptive_lighting }}
+                  color_temp: >-
+                    {{ state_attr(adaptive_lighting_switch, 'color_temp_mired') |int if enable_adaptive_lighting }}
       - conditions: '{{ action == turn_on }}'
         sequence:
           - choose:
@@ -405,6 +410,10 @@ action:
                 entity_id: !input light
                 data:
                   transition: '{{ light_transition / 1000 }}'
+                  brightness_pct: >-
+                    {{ state_attr(adaptive_lighting_switch, 'brightness_pct') |int if enable_adaptive_lighting }}
+                  color_temp: >-
+                    {{ state_attr(adaptive_lighting_switch, 'color_temp_mired') |int if enable_adaptive_lighting }}
       - conditions: '{{ action == turn_off }}'
         sequence:
           - service: light.turn_off
