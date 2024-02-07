@@ -174,7 +174,7 @@ blueprint:
       selector:
         entity:
           filter:
-          - integration: AdaptiveLight
+          - integration: Adaptive Lighting
 # Automation schema
 variables:
   # convert blueprint inputs into variables to be used in templates
