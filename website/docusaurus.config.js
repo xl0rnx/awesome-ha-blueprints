@@ -2,12 +2,12 @@
 module.exports = {
   title: 'Awesome HA Blueprints',
   tagline: 'A curated list of automation blueprints for Home Assistant.',
-  url: 'https://epmatt.github.io',
+  url: 'https://xl0rnx.github.io',
   baseUrl: '/awesome-ha-blueprints/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'EPMatt',
+  organizationName: 'xl0rnx',
   projectName: 'awesome-ha-blueprints',
   themeConfig: {
     announcementBar: {
