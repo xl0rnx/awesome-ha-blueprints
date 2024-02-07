@@ -61,6 +61,18 @@ blueprint:
             - Xiaomi WXCJKG13LM Aqara Opple 6 button remote (#2)
             - Xiaomi WXCJKG13LM Aqara Opple 6 button remote (#3)
             - Xiaomi WXKG11LM Aqara Wireless Switch Mini
+    enable_adaptive_lighting:
+      name: (Optional) Use Adaptive Lighting
+      description: Use Adaptive Lighting custom component to power on light with parameters reflecting current sun position. Not available when 'Force brightness' is enabled
+      default: false
+      selector:
+        boolean:
+    adaptive_lighting_switch:
+      name: Entity of Adaptive Lighting switch
+      description: Adaptive lighting switch to pull parameters from
+      selector:
+        entity:
+          domain: switch
     light:
       name: (Required) Light
       description: Light which will be controlled with this automation.
@@ -162,18 +174,7 @@ blueprint:
       default: true
       selector:
         boolean:
-    enable_adaptive_lighting:
-      name: (Optional) Use Adaptive Lighting
-      description: Use Adaptive Lighting custom component to power on light with parameters reflecting current sun position. Not available when 'Force brightness' is enabled
-      default: false
-      selector:
-        boolean:
-    adaptive_lighting_switch:
-      name: Entity of Adaptive Lighting switch
-      description: Adaptive lighting switch to pull parameters from
-      selector:
-        entity:
-          domain: switch
+    
 # Automation schema
 variables:
   # convert blueprint inputs into variables to be used in templates
