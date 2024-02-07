@@ -2,8 +2,8 @@
 module.exports = {
   title: 'Awesome HA Blueprints',
   tagline: 'A curated list of automation blueprints for Home Assistant.',
-  url: 'https://xl0rnx.github.io',
-  baseUrl: '/awesome-ha-blueprints/',
+  url: 'https://awesome-ha-blueprints.vercel.app',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
